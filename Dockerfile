@@ -15,6 +15,7 @@ RUN apk update && \
 
 # Should be put after above installations
 COPY --from=kaniko /kaniko/executor /kaniko/
+COPY --from=kaniko /kaniko/.docker /kaniko/.docker
 COPY --from=BASE /vault /usr/local/bin/
 
 ENV HOME /root
