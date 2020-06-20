@@ -10,7 +10,7 @@ FROM alpine:3.12.0
 
 RUN apk update && \
   apk upgrade && \
-  apk add --no-cache bash git util-linux grep \
+  apk add --no-cache git \
   && rm -rf /var/lib/apt/lists/*
 
 # Should be put after above installations
